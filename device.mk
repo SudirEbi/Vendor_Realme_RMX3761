@@ -1,5 +1,9 @@
 DEVICE_PATH := device/UNISOC/RMX3761
 
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/prebuilt/boot.img-kernel:kernel
+
 # API
 PRODUCT_SHIPPING_API_LEVEL := 33
 
