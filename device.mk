@@ -2,9 +2,10 @@ DEVICE_PATH := device/realme/RMX3761
 
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/prebuilt/boot.img:kernel
-    $(DEVICE_PATH)/prebuilt/vendor-boot.img:dtb
+    $(DEVICE_PATH)/prebuilt/boot.img:kernel \
+    $(DEVICE_PATH)/prebuilt/vendor-boot.dtb:dtb \
     $(DEVICE_PATH)/prebuilt/dtbo.img:dtbo
+
     
     
 #sepolicy    
