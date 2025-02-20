@@ -2,7 +2,10 @@ DEVICE_PATH := device/realme/RMX3761
 
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/prebuilt/boot.img-kernel:kernel
+    $(DEVICE_PATH)/prebuilt/boot.img:kernel
+    $(DEVICE_PATH)/prebuilt/vendor-boot.img:dtb
+    $(DEVICE_PATH)/prebuilt/dtbo.img:dtbo
+    
     
 #sepolicy    
     BOARD_SEPOLICY_PREBUILT := device/realme/RMX3761/sepolicy/precompiled/precompiled_sepolicy
@@ -11,6 +14,7 @@ PRODUCT_COPY_FILES += \
 # API
 PRODUCT_SHIPPING_API_LEVEL := 32
 BOARD_SYSTEMSDK_VERSIONS := 32
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 
 # A/B
