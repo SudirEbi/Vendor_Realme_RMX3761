@@ -1,4 +1,4 @@
-DEVICE_PATH := device/UNISOC/RMX3761
+DEVICE_PATH := device/realme/RMX3761
 
 
 PRODUCT_COPY_FILES += \
