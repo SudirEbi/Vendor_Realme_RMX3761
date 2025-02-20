@@ -1,4 +1,4 @@
-DEVICE_PATH := device/UNISOC/RMX3761
+DEVICE_PATH := device/realme/RMX3761
 PRODUCT_COPY_FILES += recovery/root/system/etc/twrp.flags:recovery/root/system/etc/twrp.flags
 
 # Architecture
@@ -63,9 +63,9 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
 TARGET_COPY_OUT_VENDOR := vendor
 BOARD_SUPER_PARTITION_SIZE := 16777216000
-BOARD_SUPER_PARTITION_GROUPS := UNISOC_dynamic_partitions
-BOARD_UNISOC_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product system_ext odm vendor_dlkm
-BOARD_UNISOC_DYNAMIC_PARTITIONS_SIZE := 16777214976
+BOARD_SUPER_PARTITION_GROUPS := realme_dynamic_partitions
+BOARD_realme_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product system_ext odm vendor_dlkm
+BOARD_realme_DYNAMIC_PARTITIONS_SIZE := 16777214976
 
 # Platform
 TARGET_BOARD_PLATFORM := ums9320

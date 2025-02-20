@@ -7,13 +7,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device specific configs
-$(call inherit-product, device/UNISOC/RMX3761/device.mk)
+$(call inherit-product, device/realme/RMX3761/device.mk)
 
 # Device identifier
 PRODUCT_DEVICE := RMX3761
 PRODUCT_NAME := twrp_RMX3761
-PRODUCT_BRAND := UNISOC
+PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX3761
-PRODUCT_MANUFACTURER := UNISOC
+PRODUCT_MANUFACTURER := realme
 
 PRODUCT_PROPERTY_OVERRIDES += ro.twrp.vendor_boot=true
