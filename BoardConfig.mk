@@ -1,5 +1,4 @@
 DEVICE_PATH := device/realme/RMX3761
-PRODUCT_COPY_FILES += recovery/root/system/etc/twrp.flags:recovery/root/system/etc/twrp.flags
 
 # Architecture
 TARGET_ARCH := arm64
