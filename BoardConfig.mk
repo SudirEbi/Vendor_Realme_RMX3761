@@ -23,6 +23,8 @@ TARGET_NO_BOOTLOADER := true
 
 # Ensure recovery is included in vendor_boot
 BOARD_INCLUDE_RECOVERY_RAMDISK := true
+BOARD_USES_VENDOR_BOOT := true
+BOARD_VENDOR_BOOTIMAGE_FILE_SYSTEM_TYPE := "ramdisk"
 BOARD_KERNEL_CMDLINE += androidboot.force_normal_boot=1
 BOARD_KERNEL_CMDLINE += androidboot.slot_suffix=$(getprop ro.boot.slot_suffix)
 
