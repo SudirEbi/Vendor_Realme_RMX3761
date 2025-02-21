@@ -21,6 +21,19 @@ TARGET_BOOTLOADER_BOARD_NAME := RMX3761
 TARGET_NO_BOOTLOADER := true
 #TARGET_USES_UEFI := true
 
+# Ensure recovery is included in vendor_boot
+BOARD_INCLUDE_RECOVERY_RAMDISK := true
+BOARD_KERNEL_CMDLINE += androidboot.force_normal_boot=1
+BOARD_KERNEL_CMDLINE += androidboot.slot_suffix=$(getprop ro.boot.slot_suffix)
+
+# Define separate vendor_boot.img
+TARGET_NO_RECOVERY := true
+TARGET_COPY_OUT_VENDOR_BOOT := vendor_boot
+BOARD_BUILD_VENDOR_BOOT_IMAGE := true
+
+# Path to TWRP recovery binary
+TARGET_RECOVERY_DEVICE_MODULES := twrp
+
 # Build Rule
 ALLOW_MISSING_DEPENDENCIES := true
 
@@ -29,8 +42,8 @@ TARGET_KERNEL_ARCH := arm64
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_HEADER_ARCH := arm64
 
-#Sepolicy
-BOARD_VENDOR_SEPOLICY_DIRS += device/realme/RMX3761/sepolicy/precompiled
+# Sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += device/RMX3761/sepolicy/precompiled
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8 buildvariant=user
@@ -67,7 +80,7 @@ BOARD_REALME_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product system_e
 BOARD_REALME_DYNAMIC_PARTITIONS_SIZE := 16777214976
 
 # Platform
-TARGET_BOARD_PLATFORM := ums9320
+TARGET_BOARD_PLATFORM := ums9230
 
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
