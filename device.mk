@@ -4,7 +4,8 @@ DEVICE_PATH := device/realme/RMX3761
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/prebuilt/boot.img:kernel \
     $(DEVICE_PATH)/prebuilt/vendor-boot.dtb:dtb \
-    $(DEVICE_PATH)/prebuilt/dtbo.img:dtbo
+    $(DEVICE_PATH)/prebuilt/dtbo.img:dtbo \
+    $(DEVICE_PATH)/recovery/root/system/etc/twrp.flags:system/etc/twrp.flags
 
     
     
