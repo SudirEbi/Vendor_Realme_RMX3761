@@ -1,23 +1,18 @@
 DEVICE_PATH := device/realme/RMX3761
 
-
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/prebuilt/boot.img:kernel \
     $(DEVICE_PATH)/prebuilt/dtb.img:dtb \
     $(DEVICE_PATH)/prebuilt/dtbo.img:dtbo \
     $(DEVICE_PATH)/recovery/root/system/etc/twrp.flags:system/etc/twrp.flags
-
-    
     
 #sepolicy    
     BOARD_SEPOLICY_PREBUILT := device/realme/RMX3761/sepolicy/precompiled/precompiled_sepolicy
-
 
 # API
 PRODUCT_SHIPPING_API_LEVEL := 32
 BOARD_SYSTEMSDK_VERSIONS := 32
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
-
 
 # A/B
 AB_OTA_UPDATER := true
