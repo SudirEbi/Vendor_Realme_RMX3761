@@ -40,10 +40,6 @@ BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_KERNEL_CMDLINE += androidboot.force_normal_boot=1
 BOARD_KERNEL_CMDLINE += androidboot.slot_suffix=$(getprop ro.boot.slot_suffix)
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_RMX3761
-TARGET_RECOVERY_DEVICE_MODULES := libinit_RMX3761
-
 # Build Rule
 ALLOW_MISSING_DEPENDENCIES := true
 
