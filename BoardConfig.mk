@@ -53,7 +53,7 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 BOARD_VENDOR_SEPOLICY_DIRS += device/RMX3761/sepolicy/precompiled
 
 # offset,header
-BOARD_VENDOR_CMDLINE := console=ttyS1,115200n8 buildvariant=user buildvariant=eng
+BOARD_VENDOR_CMDLINE := console=ttyS1,115200n8
 BOARD_VENDOR_BASE := 0x00000000
 BOARD_PAGE_SIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x05400000
