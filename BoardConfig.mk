@@ -19,21 +19,21 @@ TARGET_OTA_ASSERT_DEVICE := RMX3761
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := RMX3761
 TARGET_NO_BOOTLOADER := true
-#TARGET_USES_UEFI := true
+
+# Define separate vendor_boot.img
+TARGET_NO_RECOVERY := true
 
 # Ensure recovery is included in vendor_boot
 BOARD_INCLUDE_RECOVERY_RAMDISK := true
 BOARD_USES_VENDOR_BOOT := true
+BOARD_BUILD_VENDOR_BOOT_IMAGE := true
 BOARD_VENDOR_BOOTIMAGE_FILE_SYSTEM_TYPE := "ramdisk"
+BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
+TARGET_COPY_OUT_VENDOR_BOOT := vendor_boot
+BOARD_VENDOR_RAMDISK_USE_LZ4 := true
+
 BOARD_KERNEL_CMDLINE += androidboot.force_normal_boot=1
 BOARD_KERNEL_CMDLINE += androidboot.slot_suffix=$(getprop ro.boot.slot_suffix)
-
-# Define separate vendor_boot.img
-TARGET_NO_RECOVERY := true
-BOARD_BUILD_VENDOR_BOOT_IMAGE := true
-TARGET_COPY_OUT_VENDOR_BOOT := vendor_boot
-BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
-BOARD_VENDOR_BOOTIMAGE_FILE_SYSTEM_TYPE := "ramdisk"
 
 # Path to TWRP recovery binary
 TARGET_RECOVERY_DEVICE_MODULES := twrp
@@ -50,7 +50,7 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += device/RMX3761/sepolicy/precompiled
 
-# Kernel
+# offset,header
 BOARD_VENDOR_CMDLINE := console=ttyS1,115200n8 buildvariant=user buildvariant=eng
 BOARD_VENDOR_BASE := 0x00000000
 BOARD_PAGE_SIZE := 4096
